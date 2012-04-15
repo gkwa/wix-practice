@@ -11,3 +11,14 @@ clean:
 		product.wixpdb \
 		product.msi \
 		product.wixobj
+
+download: dotnetfx35.exe Wix35.msi
+
+dotnet:dotnetfx35.exe
+dotnetfx35.exe:
+	wget http://download.microsoft.com/download/2/0/E/20E90413-712F-438C-988E-FDAA79A8AC3D/dotnetfx35.exe
+
+wix: Wix35.msi
+.PHONY: wix
+Wix35.msi:
+	wget http://dl.dropbox.com/u/9140609/Wix35.msi
