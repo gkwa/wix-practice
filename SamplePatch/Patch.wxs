@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
+  <Patch AllowRemoval="yes" Manufacturer="Acme Ltd." MoreInfoURL="www.acmefoobar.com"
+    DisplayName="Foobar 1.0.1 Patch" Description="Small Update Patch" Classification="Update">
+ 
+    <Media Id='5000' Cabinet='Sample.cab'>
+      <PatchBaseline Id='Sample'/>
+    </Media>
+ 
+    <PatchFamily Id='SamplePatchFamily' Version='1.0.0.0' Supersede='yes'>
+      <ComponentRef Id='MainExecutable'/>
+    </PatchFamily>
+
+  </Patch>
+</Wix>
