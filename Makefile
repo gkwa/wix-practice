@@ -1,3 +1,5 @@
+RM = rm
+
 msi: product.msi
 product.msi:
 	candle product.wxs
@@ -7,10 +9,9 @@ test: product.msi
 	cmd /c product.msi
 
 clean:
-	rm -f \
-		product.wixpdb \
-		product.msi \
-		product.wixobj
+	$(RM) -f product.wixpdb
+	$(RM) -f product.msi
+	$(RM) -f product.wixobj
 
 download: dotnetfx35.exe Wix35.msi
 
